@@ -40,6 +40,12 @@
         "file": "dynlink.h",
         "structs": {
             "dso": [
+              "flags",
+              "mem_allocated",
+              "mem_addr",
+              "mem_size",
+              "table_addr",
+              "table_size",
               "name"
             ]
         }

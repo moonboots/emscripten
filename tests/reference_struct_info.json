@@ -1366,8 +1366,12 @@
             "rem": 4
         },
         "dso": {
-            "__size__": 20,
-            "name": 20
+            "__size__": 36,
+            "mem_addr": 20,
+            "mem_size": 24,
+            "name": 36,
+            "table_addr": 28,
+            "table_size": 32
         },
         "emscripten_fetch_attr_t": {
             "__size__": 92,
