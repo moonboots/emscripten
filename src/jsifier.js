@@ -322,7 +322,9 @@ function ${name}(${args}) {
         //   foo: '=[value]'
         //  emits
         //   'var foo = [value];'
-        if (typeof snippet === 'string' && snippet[0] == '=') snippet = snippet.substr(1);
+        if (typeof snippet === 'string' && snippet[0] == '=') {
+          snippet = snippet.substr(1);
+        }
         contentText = `var ${finalName} = ${snippet};`;
       }
       var sig = LibraryManager.library[ident + '__sig'];
