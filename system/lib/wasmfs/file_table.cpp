@@ -164,12 +164,12 @@ FileTable::Handle::add(std::shared_ptr<OpenFileState> openFileState) {
   return -(EBADF);
 }
 
-__wasi_errno_t offsetWrite(__wasi_fd_t fd,
+__wasi_errno_t offsetWrite(const __wasi_fd_t& fd,
                            const __wasi_ciovec_t* iovs,
-                           size_t iovs_len,
-                           __wasi_filesize_t offset,
+                           const size_t& iovs_len,
+                           const __wasi_filesize_t& offset,
                            __wasi_size_t* nwritten,
-                           bool setPosition) {
+                           const bool& setPosition) {
   if (iovs_len < 0 || offset < 0) {
     return __WASI_ERRNO_INVAL;
   }
@@ -222,12 +222,12 @@ __wasi_errno_t offsetWrite(__wasi_fd_t fd,
   return __WASI_ERRNO_SUCCESS;
 }
 
-__wasi_errno_t offsetRead(__wasi_fd_t fd,
+__wasi_errno_t offsetRead(const __wasi_fd_t& fd,
                           const __wasi_iovec_t* iovs,
-                          size_t iovs_len,
-                          __wasi_filesize_t offset,
+                          const size_t& iovs_len,
+                          const __wasi_filesize_t& offset,
                           __wasi_size_t* nread,
-                          bool setPosition) {
+                          const bool& setPosition) {
   if (iovs_len < 0 || offset < 0) {
     return __WASI_ERRNO_INVAL;
   }
